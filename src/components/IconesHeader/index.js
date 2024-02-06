@@ -15,10 +15,11 @@ const Icones = styled.ul`
 const icones = [perfil, sacola];
 
 function IconesHeader() {
+  var index = 0;
   return (
     <Icones>
       {icones.map((icone) => (
-        <Icone>
+        <Icone key={index++}>
           <img src={icone} alt=""></img>
         </Icone>
       ))}
